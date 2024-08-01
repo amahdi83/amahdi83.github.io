@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali Mahdi's GitHub Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #007bff;
+        }
+        nav a {
+            padding: 14px 20px;
+            display: block;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #0056b3;
+        }
+        .tab-content {
+            display: none;
+            padding: 100px;
+        }
+        .active {
+            display: block;
+        }
+        .emoji {
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Ali Mahdi 🌟</h1>
+    <h1>Machine Learning Scientist</h1>
+</header>
+
+<nav>
+    <a href="#home" class="tab-link" onclick="showTab('home')">Home 🏠</a>
+    <a href="#about" class="tab-link" onclick="showTab('about')">About 📖</a>
+    <a href="#skills" class="tab-link" onclick="showTab('skills')">Skills 🛠️</a>
+    <a href="#projects" class="tab-link" onclick="showTab('projects')">Projects 💻</a>
+    <a href="#publications" class="tab-link" onclick="showTab('publications')">Publications 📚</a>
+    <a href="#contact" class="tab-link" onclick="showTab('contact')">Contact 📞</a>
+</nav>
+
+<div id="home" class="tab-content active">
+    <h2>Hi I am Ali Mahdi 👋.</h2>
+    <p>Welcome to my GitHub website! Here you can find information about my professional background, skills, projects, publications, and how to contact me. Feel free to explore! 🚀</p>
+</div>
+
+<div id="about" class="tab-content">
+    <h2>About Me 🌟</h2>
+    <p style="line-height: 2">I am a Machine Learning Scientist/Engineer with a Ph.D. Electrical & in Computer Engineering. Over five years of professional experience in
+developing and deploying advanced Machine Learning algorithms for Computer Vision and Reinforcement Learning applications.</p>
+</div>
+
+<div id="skills" class="tab-content">
+    <h2>Skills 🛠️</h2>
+    <ul>
+        <li style="line-height: 2">Programming Languages: Python, Matlab, R, C++, and C ⌨️</li>
+        <li style="line-height: 2">Machine Learning Frameworks: TensorFlow, Keras, PyTorch, and Scikit-Learn 🤖</li>
+        <li style="line-height: 2">Tools & APIs: OpenCV, Numpy, SciPy, Matplotlib, and Seaborn 🧩</li>
+        <li style="line-height: 2">Containarization & Version Control tools: Docker, GitHub, and GitLab 📦</li>
+    </ul>
+    
+    <h2>Currently Learning 📚</h2>
+    <ul>
+        <li style="line-height: 2">AWS ☁️, Kubernetes 🔄, and LLM 💬.</li>
+    </ul>
+    
+</div>
+
+<div id="projects" class="tab-content">
+    <h2>Projects 💼</h2>
+    <ul>
+        <li style="line-height: 2">VSAPI (Currently private): A Visual Saliency API to analyze where do people look. This API consist of +20 predictive models, 8 evaluation metrics, and 10 datasets.</li>
+        <li style="line-height: 2">Tetris: An implementation of the famous Tetris game.</li>
+        <li style="line-height: 2">DCGAN: An implementation of a generative AI approach in TensorFlow and PyTorch to learn to generate fake human faces that look realistic. The model is robust and uses only 10000 images to learn to generate faces.</li>
+    </ul>
+</div>
+
+<div id="publications" class="tab-content">
+    <h2>Publications 📄</h2>
+    <ul>
+        <li style="line-height: 2">Can consumers’ visual attention be predictable? A saliency modelling-based approach on fashion advertisements.</li>
+        <li style="line-height: 2">Minimizing data requirements for soldier-interactive AI/ML applications through opportunistic sensing.</li>
+        <li style="line-height: 2">An Extensive Evaluation of Pre-trained Deep Features of Convolutional Neural Networks for Saliency Prediction of Human Visual Attention.</li>
+        <li style="line-height: 2">Evaluation of bottom-up saliency model using deep features pretrained by deep convolutional neural networks.</li>
+        <li style="line-height: 2">Deepfeat: a bottom-up and top-down saliency model based on deep features of convolutional neural nets.</li>
+        <li style="line-height: 2">Speech enhancement in spectral envelope and details subspaces.</li>
+        <li style="line-height: 2">Bottom up saliency evaluation via deep features of state-of-the-art convolutional neural networks.</li>
+        <li style="line-height: 2">A comparison study of saliency models for fixation prediction on infants and adults.</li>
+        <li style="line-height: 2">Infants gaze pattern analyzing using contrast entropy minimization.</li>
+        <li style="line-height: 2">Recent developments on noise induced hearing loss for military and industrial applications.</li>
+        <li style="line-height: 2">Line Profile Based Segmentation Algorithm for Touching Corn Kernels.</li>
+    </ul>
+</div>
+
+<div id="contact" class="tab-content">
+    <h2>Contact Me 📧</h2>
+    <p>Email: ali.majeed.mahdi@gmail.com</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/ali-mahdi-04180789" target="_blank">linkedin.com/in/ali-mahdi-04180789</a></p>
+</div>
+
+<script>
+    function showTab(tabId) {
+        var tabs = document.getElementsByClassName('tab-content');
+        for (var i = 0; i < tabs.length; i++) {
+            tabs[i].classList.remove('active');
+        }
+        document.getElementById(tabId).classList.add('active');
+    }
+</script>
+
+</body>
+</html>
