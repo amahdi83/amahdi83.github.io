@@ -3,136 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ali Mahdi's GitHub Website</title>
+    <title>Ali Mahdi - Portfolio</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: white;
+            background-color: #f4f4f9;
             margin: 0;
             padding: 0;
+            color: #333;
         }
         header {
-            background-color: #007bff;
-            color: white;
+            text-align: center;
+            padding: 50px 0;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+        }
+        header p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center 30%;
+            border: 5px solid #333;
+            display: block;
+            margin: 0 auto;
+        }
+        nav {
+            background-color: #333;
             padding: 15px;
             text-align: center;
         }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #007bff;
-        }
         nav a {
-            padding: 14px 20px;
-            display: block;
+            margin: 0 15px;
             color: white;
-            text-align: center;
             text-decoration: none;
+            font-size: 1.2rem;
         }
         nav a:hover {
-            background-color: #0056b3;
+            color: #007BFF;
         }
-        .tab-content {
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            min-height: calc(45vh - 60px); 
+        }
+        section {
             display: none;
-            padding: 100px;
+            padding: 20px 0;
         }
-        .active {
+        section.active {
             display: block;
         }
-        .emoji {
-            font-size: 2em;
+        footer {
+            position: relative;
+            bottom: 0;
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            margin-top: 50px;
+        }
+        h2 {
+            font-size: 1.5rem;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        h2 span {
+            font-size: 2rem;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            padding: 10px 0;
+        }
+        a {
+            color: #007BFF; /* Default link color */
+            text-decoration: none;
+        }
+        /* Specific link color for publications section */
+        #publications a {
+            color: black; /* Set publication link color to black */
         }
     </style>
+    <script>
+        function openSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => section.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
 </head>
 <body>
+    <header>
+        <img src="ali.jpg" alt="Ali Mahdi" class="profile-pic">
+        <h1>Ali Mahdi</h1>
+        <p>👨‍💻 Computer Vision Engineer | AI Specialist | 📊 5 Years in Industry | 🔬 12 Years of Research</p>
+    </header>
 
-<header>
-    <h1>Ali Mahdi 🌟</h1>
-    <h1>Machine Learning Scientist</h1>
-</header>
+    <nav>
+        <a href="#" onclick="openSection('home')">🏠 Home</a>
+        <a href="#" onclick="openSection('about')">👤 About Me</a>
+        <a href="#" onclick="openSection('skills')">💼 Skills</a>
+        <a href="#" onclick="openSection('projects')">🛠️ Projects</a>
+        <a href="#" onclick="openSection('publications')">📚 Publications</a>
+        <a href="#" onclick="openSection('contact')">📧 Contact</a>
+    </nav>
 
-<nav>
-    <a href="#home" class="tab-link" onclick="showTab('home')">Home 🏠</a>
-    <a href="#about" class="tab-link" onclick="showTab('about')">About 📖</a>
-    <a href="#skills" class="tab-link" onclick="showTab('skills')">Skills 🛠️</a>
-    <a href="#projects" class="tab-link" onclick="showTab('projects')">Projects 💻</a>
-    <a href="#publications" class="tab-link" onclick="showTab('publications')">Publications 📚</a>
-    <a href="#contact" class="tab-link" onclick="showTab('contact')">Contact 📞</a>
-</nav>
+    <div class="container">
+        <!-- Home Section -->
+        <section id="home" class="active">
+            <h2><span>🏠</span> Home</h2>
+            <p>Welcome to my portfolio! Explore my work in AI and computer vision, my skills, and my research experience.</p>
+        </section>
 
-<div id="home" class="tab-content active">
-    <h2>Hi I am Ali Mahdi 👋.</h2>
-    <p>Welcome to my GitHub website! Here you can find information about my professional background, skills, projects, publications, and how to contact me. Feel free to explore! 🚀</p>
-</div>
+        <!-- About Me Section -->
+        <section id="about">
+            <h2><span>👤</span> About Me</h2>
+            <p>I am a computer vision engineer with 5 years of experience in the industry and 12 years of research experience. I specialize in predictive and generative AI, reinforcement learning, and I am currently learning large language models! 💡</p>
+        </section>
 
-<div id="about" class="tab-content">
-    <h2>About Me 🌟</h2>
-    <p style="line-height: 2">I am a Machine Learning Scientist/Engineer with a Ph.D. Electrical & in Computer Engineering. Over five years of professional experience in
-developing and deploying advanced Machine Learning algorithms for Computer Vision and Reinforcement Learning applications.</p>
-</div>
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2><span>💼</span> Skills</h2>
+            <ul>
+                <li>🐍 Python</li>
+                <li>👁️ MATLAB</li>
+                <li>📊 R</li>
+                <li>⚙️ C++</li>
+                <li>🔥 PyTorch</li>
+                <li>🧠 TensorFlow</li>
+                <li>🤖 Scikit-learn</li>
+                <li>📷 OpenCV</li>
+                <li>☁️ AWS</li>
+                <li>🐳 Docker</li>
+                <li>🔧 GitHub</li>
+            </ul>
+        </section>
 
-<div id="skills" class="tab-content">
-    <h2>Skills 🛠️</h2>
-    <ul>
-        <li style="line-height: 2">Programming Languages: Python, Matlab, R, C++, and C ⌨️</li>
-        <li style="line-height: 2">Machine Learning Frameworks: TensorFlow, Keras, PyTorch, and Scikit-Learn 🤖</li>
-        <li style="line-height: 2">Tools & APIs: OpenCV, Numpy, SciPy, Matplotlib, and Seaborn 🧩</li>
-        <li style="line-height: 2">Containarization & Version Control tools: Docker, GitHub, and GitLab 📦</li>
-        <li style="line-height: 2">Cloud Platforms: AWS ☁️</li>
-    </ul>
-    
-    <h2>Currently Learning 📚</h2>
-    <ul>
-        <li style="line-height: 2">Large Language Models 💬.</li>
-    </ul>
-    
-</div>
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2><span>🛠️</span> Projects</h2>
+            <ul>
+                <li>🧠 <strong>VSAPI</strong>: A Visual Saliency API to analyze where people look. This API consists of over 20 predictive models, 8 evaluation metrics, and 10 datasets. This repo is currently private.</li>
+                <li>🔍 <strong><a href="https://github.com/amahdi83/VAE_CelebA" target="_blank">VAE</a></strong>: A varietional auto encoder implemented in TensorFlow and PyTorch to learn to generate human faces that look realistic. The model trains on 10000 images only.</li>
+                <li>🖼️ <strong><a href="https://github.com/amahdi83/VQVAE_CelebA" target="_blank">VQVAE_CelebA</a></strong>: A vector quantized varietional auto encoder implemented in PyTorch to learn to reconstruct human faces. This model is trained on the Celeb_A dataset.</li>
+                <li>🔢 <strong><a href="https://github.com/amahdi83/VQVAE_mnist" target="_blank">VQVAE_mnist</a></strong>: A generative model that learns digits representation via VQVAE, and digit generation using PixelCNN. This model is trained on the MNIST dataset.</li>
+                <li>🌐 <strong><a href="https://github.com/amahdi83/DCGAN-CelebA" target="_blank">DCGAN</a></strong>: An implementation of a generative AI approach in TensorFlow and PyTorch to learn to generate fake human faces that look realistic. The model is robust and uses only 10000 images to learn to generate faces.</li>
+                <li>🩺 <strong><a href="https://github.com/amahdi83/Pneumonia-Classification" target="_blank">Pneumonia Classification</a></strong>: A comprehensive evaluation of pneumonia classification using four models including custom CNN, transfer learning, partial fine-tuning, and full fine-tuning.</li>
+                <li>🎮 <strong><a href="https://github.com/amahdi83/Tetris" target="_blank">Tetris</a></strong>: An implementation of the famous Tetris game.</li>
+            </ul>
+        </section>
 
-<div id="projects" class="tab-content">
-    <h2>Projects 💼</h2>
-    <ul>
-        <li style="line-height: 2">VSAPI (Currently private): A Visual Saliency API to analyze where do people look. This API consist of +20 predictive models, 8 evaluation metrics, and 10 datasets.</li>
-        <li style="line-height: 2">Tetris: An implementation of the famous Tetris game.</li>
-        <li style="line-height: 2">DCGAN: An implementation of a generative AI approach in TensorFlow and PyTorch to learn to generate fake human faces that look realistic. The model is robust and uses only 10000 images to learn to generate faces.</li>
-        <li style="line-height: 2">VAE: A varietional auto encoder implemented in TensorFlow and PyTorch to learn to generate human faces that look realistic. The model trains on 10000 images only.</li>
-        <li style="line-height: 2">VQVAE: A vector quantized varietional auto encoder implemented in PyTorch to learn to reconstruct human faces. </li>
-        <li style="line-height: 2">VQVAE on MNIST: A generative model that learns digits representation via VQVAE, and digit generation using PixelCNN. </li>
-        <li style="line-height: 2">Pneumonia Classification: A comprehensive evaluation of pneumonia classification using four models including custom CNN, transfer learning, partial fine-tuning, and full fine-tuning.</li>
-    </ul>
-</div>
+        <!-- Publications Section -->
+        <section id="publications">
+            <h2><span>📚</span> Publications</h2>
+            <ul>
+                <li><strong><a href="https://www.tandfonline.com/doi/abs/10.1080/17543266.2021.1925354" target="_blank">Can consumers’ visual attention be predictable? A saliency modelling-based approach on fashion advertisements.</a></strong></li>
+                <li><strong><a href="https://www.researchgate.net/profile/Jonathan-Touryan/publication/340878249_Minimizing_data_requirements_for_soldier-interactive_AIML_applications_through_opportunistic_sensing/links/632dacef165ca2278769b200/Minimizing-data-requirements-for-soldier-interactive-AI-ML-applications-through-opportunistic-sensing.pdf" target="_blank">Minimizing data requirements for soldier-interactive AI/ML applications through opportunistic sensing.</a></strong></li>
+                <li><strong><a href="https://www.sciencedirect.com/science/article/abs/pii/S1047320319302834" target="_blank">An Extensive Evaluation of Pre-trained Deep Features of Convolutional Neural Networks for Saliency Prediction of Human Visual Attention.</a></strong></li>
+                <li><strong><a href="https://www.spiedigitallibrary.org/journals/Journal-of-Electronic-Imaging/volume-28/issue-3/033033/Evaluation-of-bottom-up-saliency-model-using-deep-features-pretrained/10.1117/1.JEI.28.3.033033.short" target="_blank">Evaluation of bottom-up saliency model using deep features pretrained by deep convolutional neural networks.</a></strong></li>
+                <li><strong><a href="https://ieeexplore.ieee.org/abstract/document/8624459" target="_blank">Deepfeat: a bottom-up and top-down saliency model based on deep features of convolutional neural nets.</a></strong></li>
+                <li><strong><a href="https://www.sciencedirect.com/science/article/abs/pii/S0167639317304326" target="_blank">Speech enhancement in spectral envelope and details subspaces.</a></strong></li>
+                <li><strong><a href="https://ieeexplore.ieee.org/abstract/document/8333415" target="_blank">Bottom up saliency evaluation via deep features of state-of-the-art convolutional neural networks.</a></strong></li>
+                <li><strong><a href="https://ieeexplore.ieee.org/abstract/document/7906576" target="_blank">A comparison study of saliency models for fixation prediction on infants and adults.</a></strong></li>
+                <li><strong><a href="https://ieeexplore.ieee.org/abstract/document/7346124" target="_blank">Infants gaze pattern analyzing using contrast entropy minimization.</a></strong></li>
+                <li><strong><a href="https://www.researchgate.net/profile/Jun-Qin-8/publication/269632216_Recent_Developments_on_Noise_Induced_Hearing_Loss_for_Military_and_Industrial_Applications/links/5605b7a208ae5e8e3f3319e7/Recent-Developments-on-Noise-Induced-Hearing-Loss-for-Military-and-Industrial-Applications.pdf" target="_blank">Recent developments on noise induced hearing loss for military and industrial applications.</a></strong></li>
+                <li><strong><a href="https://www.researchgate.net/profile/Jun-Qin-8/publication/317300346_Line_Profile_Based_Segmentation_Algorithm_for_Touching_Corn_Kernels/links/5934879eaca272fc554d8355/Line-Profile-Based-Segmentation-Algorithm-for-Touching-Corn-Kernels.pdf" target="_blank">Line Profile Based Segmentation Algorithm for Touching Corn Kernels.</a></strong></li>
+            </ul>
+        </section>
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2><span>📧</span> Contact</h2>
+            <p>Email: <a href="mailto:ali.majeed.mahdi@gmail.com">ali.majeed.mahdi@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/ali-mahdi-04180789/" target="_blank">linkedin.com/in/ali-mahdi-04180789</a></p>
+        </section>
+    </div>
 
-<div id="publications" class="tab-content">
-    <h2>Publications 📄</h2>
-    <ul>
-        <li style="line-height: 2">Can consumers’ visual attention be predictable? A saliency modelling-based approach on fashion advertisements.</li>
-        <li style="line-height: 2">Minimizing data requirements for soldier-interactive AI/ML applications through opportunistic sensing.</li>
-        <li style="line-height: 2">An Extensive Evaluation of Pre-trained Deep Features of Convolutional Neural Networks for Saliency Prediction of Human Visual Attention.</li>
-        <li style="line-height: 2">Evaluation of bottom-up saliency model using deep features pretrained by deep convolutional neural networks.</li>
-        <li style="line-height: 2">Deepfeat: a bottom-up and top-down saliency model based on deep features of convolutional neural nets.</li>
-        <li style="line-height: 2">Speech enhancement in spectral envelope and details subspaces.</li>
-        <li style="line-height: 2">Bottom up saliency evaluation via deep features of state-of-the-art convolutional neural networks.</li>
-        <li style="line-height: 2">A comparison study of saliency models for fixation prediction on infants and adults.</li>
-        <li style="line-height: 2">Infants gaze pattern analyzing using contrast entropy minimization.</li>
-        <li style="line-height: 2">Recent developments on noise induced hearing loss for military and industrial applications.</li>
-        <li style="line-height: 2">Line Profile Based Segmentation Algorithm for Touching Corn Kernels.</li>
-    </ul>
-</div>
-
-<div id="contact" class="tab-content">
-    <h2>Contact Me 📧</h2>
-    <p>Email: ali.majeed.mahdi@gmail.com</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/ali-mahdi-04180789" target="_blank">linkedin.com/in/ali-mahdi-04180789</a></p>
-</div>
-
-<script>
-    function showTab(tabId) {
-        var tabs = document.getElementsByClassName('tab-content');
-        for (var i = 0; i < tabs.length; i++) {
-            tabs[i].classList.remove('active');
-        }
-        document.getElementById(tabId).classList.add('active');
-    }
-</script>
-
+    <footer>
+        <p>&copy; 2024 Ali Mahdi</p>
+    </footer>
 </body>
 </html>
