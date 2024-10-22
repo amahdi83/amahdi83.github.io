@@ -105,7 +105,7 @@
 </head>
 <body>
     <header>
-        <img src="ali.jpg" alt="Ali Mahdi" class="profile-pic">
+        <img src="https://github.com/user-attachments/assets/4ba36150-25b3-46ac-8049-9fe63fa34a18" alt="Ali Mahdi" class="profile-pic oncontextmenu="return false;">
         <h1>Ali Mahdi</h1>
         <p>👨‍💻 Computer Vision Engineer | AI Specialist | 📊 5 Years in Industry | 🔬 12 Years of Research</p>
     </header>
@@ -193,4 +193,11 @@
         <p>&copy; 2024 Ali Mahdi</p>
     </footer>
 </body>
+<script>
+    document.addEventListener('contextmenu', function(e) {
+        if (e.target.tagName === 'IMG') {
+            e.preventDefault();
+        }
+    });
+</script>
 </html>
